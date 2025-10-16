@@ -188,7 +188,6 @@
   </div>
 
   <script>
-    // Використовуємо ваш Cloudflare Worker замість прямого доступу до API
     const WORKER_URL = "https://groq.yura2014m.workers.dev/";
 
     let lastRequestTime = 0;
@@ -228,7 +227,6 @@
       quoteText.style.opacity = "0";
 
       try {
-        // Відправляємо запит до Worker (без токена!)
         const response = await fetch(WORKER_URL, {
           method: "POST",
           headers: {
