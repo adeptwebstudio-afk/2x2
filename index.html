@@ -1,314 +1,271 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Надихнутись розумними словами</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.0/font/bootstrap-icons.css" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0;
-      padding: 20px;
-    }
-
-    .main-container {
-      max-width: 800px;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 30px;
-      animation: fadeInScale 0.8s ease-out;
-    }
-
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #5a189a;
-      margin-bottom: 1.5rem;
-      text-align: center;
-      animation: fadeInDown 1s ease-out;
-    }
-
-    .btn-ukrainian {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      border: none;
-    }
-
-    .btn-english {
-      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-      color: white;
-      border: none;
-    }
-
-    .spinner {
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      border: 3px solid rgba(255, 255, 255, 0.3);
-      border-top-color: white;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-      margin-left: 10px;
-      vertical-align: middle;
-    }
-
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-
-    .quote-container {
-      min-height: 200px;
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-      border-radius: 20px;
-      padding: 40px;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .quote-text {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      color: #2d3748;
-      line-height: 1.8;
-      text-align: center;
-      font-style: italic;
-      opacity: 0;
-      animation: fadeInText 1.5s ease-out forwards;
-    }
-
-    .quote-text.show {
-      animation: fadeInText 1.5s ease-out forwards;
-    }
-
-    .placeholder-text {
-      color: #a0aec0;
-      font-size: 1.2rem;
-      font-style: normal;
-      opacity: 1 !important;
-    }
-
-    @keyframes fadeInScale {
-      from {
-        opacity: 0;
-        transform: scale(0.9);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeInText {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      .quote-text {
-        font-size: 1.2rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2x2.pp.ua</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Unbounded:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #4facfe);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            min-height: 100vh;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .container-wrapper {
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        .hero {
+            text-align: center;
+        }
+        
+        h1 {
+            font-family: 'Unbounded', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            animation: fadeInDown 0.8s ease;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            font-weight: 500;
+            animation: fadeIn 1s ease 0.3s both;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 0.9;
+            }
+        }
+        
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            animation: fadeInUp 0.8s ease 0.5s both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            color: white;
+            font-size: clamp(1rem, 2vw, 1.15rem);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            padding: 1.25rem 2rem;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .links a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .links a:hover::before {
+            left: 100%;
+        }
+        
+        .links a:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .links a:active {
+            transform: translateY(-2px);
+        }
+        
+        .links a i {
+            font-size: 1.5rem;
+        }
+        
+        .founder-section {
+            margin-top: 2rem;
+            animation: fadeIn 1s ease 0.8s both;
+        }
+        
+        .founder-title {
+            font-size: clamp(1.1rem, 2vw, 1.25rem);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            opacity: 0.95;
+            letter-spacing: 0.05em;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            color: white;
+            font-size: 1.75rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-5px) scale(1.1);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .social-links a:active {
+            transform: translateY(-3px) scale(1.08);
+        }
+        
+        @media (max-width: 576px) {
+            h1 {
+                margin-bottom: 0.75rem;
+            }
+            
+            .subtitle {
+                margin-bottom: 2.5rem;
+            }
+            
+            .links {
+                margin-bottom: 2.5rem;
+            }
+            
+            .links a {
+                padding: 1.1rem 1.5rem;
+            }
+            
+            .social-links a {
+                width: 55px;
+                height: 55px;
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (hover: none) {
+            .links a:hover {
+                transform: none;
+            }
+            
+            .links a:active {
+                transform: scale(0.98);
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="container-wrapper">
+        <div class="hero">
+            <h1>2x2.pp.ua</h1>
+            <p class="subtitle">(Rozdum.production)</p>
 
-  <div class="main-container p-5">
-    <h1>Надихнутись розумними словами</h1>
+            <div class="links">
+                <a href="/words">
+                    <i class="bi bi-translate"></i>
+                    <span>Українсько-англійський тренажер</span>
+                </a>
+            </div>
 
-    <div class="d-flex gap-3 justify-content-center flex-wrap mb-4">
-      <button class="btn btn-lg rounded-pill btn-ukrainian" id="btnUkrainian">
-        Українською мовою
-      </button>
-
-      <button class="btn btn-lg rounded-pill btn-english" id="btnEnglish">
-        In English
-      </button>
-
-      <button class="btn btn-lg rounded-pill btn-outline-secondary" id="copyBtn" title="Скопіювати цитату">
-        <i class="bi bi-clipboard"></i>&nbsp; Скопіювати цитату
-      </button>
+            <div class="founder-section">
+                <div class="founder-title">Founder</div>
+                <div class="social-links">
+                    <a href="https://instagram.com/rozdum.pro/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://www.threads.com/@rozdum.pro" target="_blank" rel="noopener noreferrer" aria-label="Threads">
+                        <i class="bi bi-threads"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="quote-container">
-      <div class="quote-text placeholder-text" id="quoteText">
-        Оберіть мову для отримання натхненної цитати
-      </div>
-    </div>
-
-    <div class="text-center pt-3 border-top mt-3">
-      <a href="https://instagram.com/rozdum.pro/" target="_blank" class="me-3 text-decoration-none instagram-link">
-        <i class="bi bi-instagram"></i> Instagram
-      </a>
-      <a href="https://www.threads.com/@rozdum.pro" target="_blank" class="text-decoration-none threads-link">
-        <i class="bi bi-threads-fill"></i> Threads
-      </a>
-    </div>
-  </div>
-
-  <script>
-    const WORKER_URL = "https://groq.yura2014m.workers.dev/";
-
-    let lastRequestTime = 0;
-    const MIN_DELAY = 2000;
-    let currentQuote = "";
-
-    const btnUkrainian = document.getElementById("btnUkrainian");
-    const btnEnglish = document.getElementById("btnEnglish");
-    const quoteText = document.getElementById("quoteText");
-    const copyBtn = document.getElementById("copyBtn");
-
-    async function getQuote(language) {
-      const now = Date.now();
-      const timeSinceLastRequest = now - lastRequestTime;
-
-      if (timeSinceLastRequest < MIN_DELAY) {
-        const delay = MIN_DELAY - timeSinceLastRequest;
-        await new Promise(resolve => setTimeout(resolve, delay));
-      }
-
-      const isUkrainian = language === "uk";
-      const systemMessage = isUkrainian 
-        ? "Відповідай завжди українською мовою." 
-        : "Always respond in English.";
-      const userMessage = isUkrainian
-        ? "Напиши коротку натхненну цитату відомої людини (автор: текст цитати)"
-        : "Write a short inspirational quote from a famous person (author: quote text)";
-
-      const btn = isUkrainian ? btnUkrainian : btnEnglish;
-      const originalHTML = btn.innerHTML;
-
-      btn.disabled = true;
-      btnUkrainian.disabled = true;
-      btnEnglish.disabled = true;
-      btn.innerHTML = originalHTML + ' <span class="spinner"></span>';
-
-      quoteText.style.opacity = "0";
-
-      try {
-        const response = await fetch(WORKER_URL, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            model: "meta-llama/llama-4-scout-17b-16e-instruct",
-            messages: [
-              { role: "system", content: systemMessage },
-              { role: "user", content: userMessage }
-            ]
-          })
-        });
-
-        const data = await response.json();
-        currentQuote = data.choices?.[0]?.message?.content || "Не вдалося отримати цитату";
-
-        await new Promise(resolve => setTimeout(resolve, 300));
-
-        quoteText.textContent = currentQuote;
-        quoteText.classList.remove("placeholder-text");
-        quoteText.style.opacity = "0";
-        quoteText.classList.add("show");
-
-        setTimeout(() => {
-          quoteText.style.opacity = "1";
-        }, 50);
-
-        lastRequestTime = Date.now();
-
-      } catch (error) {
-        console.error("Error:", error);
-        currentQuote = "Виникла помилка при отриманні цитати";
-        quoteText.textContent = currentQuote;
-        quoteText.style.opacity = "1";
-      } finally {
-        btn.innerHTML = originalHTML;
-        btn.disabled = false;
-        btnUkrainian.disabled = false;
-        btnEnglish.disabled = false;
-      }
-    }
-
-    btnUkrainian.addEventListener("click", () => getQuote("uk"));
-    btnEnglish.addEventListener("click", () => getQuote("en"));
-
-    async function copyQuote() {
-      if (!currentQuote || currentQuote === "Оберіть мову для отримання натхненної цитати") {
-        alert("Спочатку отримайте цитату!");
-        return;
-      }
-
-      try {
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          await navigator.clipboard.writeText(currentQuote);
-        } else {
-          const textarea = document.createElement('textarea');
-          textarea.value = currentQuote;
-          document.body.appendChild(textarea);
-          textarea.select();
-          document.execCommand('copy');
-          document.body.removeChild(textarea);
-        }
-
-        const original = copyBtn.innerHTML;
-        copyBtn.innerHTML = '<i class="bi bi-clipboard-check"></i>&nbsp; Скопійовано!';
-        copyBtn.disabled = true;
-        setTimeout(() => {
-          copyBtn.innerHTML = original;
-          copyBtn.disabled = false;
-        }, 1500);
-
-      } catch (err) {
-        console.error('Copy failed', err);
-        alert('Не вдалося скопіювати цитату');
-      }
-    }
-
-    copyBtn.addEventListener('click', copyQuote);
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+
 
